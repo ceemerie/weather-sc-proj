@@ -43,6 +43,16 @@ p {
   font-size: 24px;
 }
 
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
 a.skyday:link {
   color: rgba(58, 53, 122, 0.658);
   text-decoration: none;
