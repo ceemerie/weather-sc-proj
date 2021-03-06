@@ -1,3 +1,106 @@
+body {
+  background-color: #d3e0ea;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+  font-size: 22px;
+  color: lightblue;
+}
+
+div.row {
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+  font-size: 22px;
+  color: #152b31;
+}
+
 h1 {
-  background-color: pink;
+  color: lightblue;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold;
+}
+
+h2.today {
+  padding: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgba(58, 53, 122, 0.658);
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+}
+
+h4 {
+  text-align: right;
+  margin-top: 10px;
+  position: relative;
+}
+p {
+  color: black;
+  text-align: center;
+  font-size: 24px;
+}
+
+a.skyday:link {
+  color: rgba(58, 53, 122, 0.658);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.skyday:visited {
+  color: rgba(58, 53, 122, 0.658);
+  text-decoration: none;
+}
+
+a.skyday:hover {
+  text-decoration: underline;
+  color: lightblue;
+  background-color: rgba(58, 53, 122, 0.658);
+  font-size: 26px;
+}
+a.skyday:active {
+  color: rgba(58, 53, 122, 0.658);
+  text-decoration: underline;
+}
+
+small {
+  color: navy;
+}
+
+input,
+select,
+textarea {
+  color: #1687a7;
+}
+
+.btn.btn-light {
+  font-family: arial;
+}
+
+.card {
+  background-image: url(https://images.pexels.com/photos/1254736/pexels-photo-1254736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.col-2 {
+  color: lightblue;
+  text-align: center;
+}
+.input-city {
+  font-family: "Overpass", sans-serif;
+}
+
+.large-icon-temperature.fas.fa-cloud {
+  font-family: "Overpass", sans-serif;
+  font-size: 145px;
+}
+.fahrenheit-and-celsius {
+  font-size: 15px;
+  font-weight: 100;
+  position: relative;
+  top: -16px;
+}
+.btn.btn-secondary {
+  background-color: rgba(58, 53, 122, 0.658);
 }
