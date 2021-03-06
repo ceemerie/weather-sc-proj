@@ -27,24 +27,27 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
-//showing city and date
+//other version
 function displayWeatherCond(response) {
-  console.log(response.data.name);
-  document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#icon-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#date").innerHTML = formatDate(
-    response.data.dt * 1000
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
+  let cityElement = document.querySelector("h1");
+  let tempElement = document.querySelector("#icon-temp");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
-  //Humidity & wind
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
+  cityElement.innerHTML = response.data.name;
+  tempElement.innerHTML = Math.round(response.data.main.temp);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 //show celsius
@@ -96,3 +99,5 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 let city = "#input-city";
 let units = "imperial";
+
+searchLocation("Chicago");
