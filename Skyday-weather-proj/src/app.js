@@ -29,16 +29,19 @@ function formatHours(timestamp) {
 
 //other version
 function displayWeatherCond(response) {
+  console.log(response.data);
+  let temperatureElement = document.querySelector("#icon-temp");
   let cityElement = document.querySelector("h1");
-  let tempElement = document.querySelector("#icon-temp");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  fahrenheitTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   cityElement.innerHTML = response.data.name;
-  tempElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -51,14 +54,24 @@ function displayWeatherCond(response) {
 }
 
 //show celsius
-
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#icon-temp");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature - 32) / 1.8);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#icon-temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+let fahrenheitTemperature = null;
 
 //show city
 
@@ -96,6 +109,9 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 // celsius link
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let city = "#input-city";
 let units = "imperial";
