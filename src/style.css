@@ -1,0 +1,180 @@
+body {
+  background-color: #d3e0ea;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+  font-size: 22px;
+  color: lightblue;
+}
+
+div.row {
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+  font-size: 22px;
+  color: #152b31;
+}
+
+h1.name {
+  color: lightblue;
+  font-size: 40px;
+  font-family: "Overpass", sans-serif;
+}
+
+h2.today {
+  padding: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgba(58, 53, 122, 0.658);
+}
+
+h3.hourly {
+  text-align: center;
+  font-size: 24px;
+  color: rgba(58, 53, 122, 0.658);
+  font-style: italic;
+}
+
+div.row {
+  margin-bottom: -10px;
+}
+
+h4 {
+  text-align: right;
+  margin-top: 10px;
+  position: relative;
+}
+p {
+  color: black;
+  text-align: center;
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  color: rgb(56, 56, 56);
+  font-size: 17px;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+}
+
+.weather-forecast h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: rgb(2, 0, 14);
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.col-4:first-letter {
+  text-transform: capitalize;
+}
+
+a.skyday:link {
+  color: rgba(58, 53, 122, 0.658);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.skyday:visited {
+  color: rgba(58, 53, 122, 0.658);
+  text-decoration: none;
+}
+
+a.skyday:hover {
+  text-decoration: underline;
+  color: lightblue;
+  background-color: rgba(58, 53, 122, 0.658);
+  font-size: 26px;
+}
+a.skyday:active {
+  color: rgba(58, 53, 122, 0.658);
+  text-decoration: underline;
+}
+
+small {
+  color: rgba(58, 53, 122, 0.658);
+  font-style: italic;
+}
+
+a.open:link {
+  font-size: 14px;
+  color: rgba(58, 53, 122, 0.658);
+}
+a.open:hover {
+  text-decoration: underline;
+  color: lightblue;
+  background-color: rgba(58, 53, 122, 0.658);
+}
+
+input,
+select,
+textarea {
+  color: #1687a7;
+}
+
+.col-4 {
+  color: white;
+  background-color: rgba(58, 53, 122, 0.25);
+  font-size: 27px;
+  font-weight: lighter;
+}
+.col-2 {
+  color: white;
+  background-color: rgba(58, 53, 122, 0.25);
+}
+
+.btn.btn-light {
+  font-family: arial;
+}
+
+.card {
+  background-image: url(https://images.pexels.com/photos/1254736/pexels-photo-1254736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.col-2 {
+  color: lightblue;
+  text-align: center;
+}
+.input-city {
+  font-family: "Overpass", sans-serif;
+}
+
+.large-icon-temperature.fas.fa-cloud {
+  font-family: "Overpass", sans-serif;
+  font-size: 145px;
+}
+.fahrenheit-and-celsius {
+  font-size: 20px;
+  font-weight: 100;
+  position: relative;
+  top: -16px;
+}
+.btn.btn-secondary {
+  background-color: rgba(58, 53, 122, 0.658);
+}
