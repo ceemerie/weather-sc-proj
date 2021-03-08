@@ -108,8 +108,8 @@ function showCity(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#input-city").value;
   let h1 = document.querySelector("h1");
-  h1.innerHTML = inputCity.value;
-  searchCity(inputCity.value);
+  h1.innerHTML = inputCity;
+  searchCity(inputCity);
 }
 
 function searchCity(city) {
